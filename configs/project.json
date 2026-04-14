@@ -9,7 +9,8 @@
     "forecast",
     "ops"
   ],
-  "accent": "#588157",
+  "accent": "#2cc840",
+  "secondary_accent": "#662ca9",
   "dashboard_metrics": [
     {
       "label": "Model Lift",
@@ -45,5 +46,52 @@
     "The primary value proposition is: Forecast shipment delays and show the most important route, vendor, and lead-time signals.",
     "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
     "Typical stakeholders include analytics, operations, product, and leadership teams working on supply-chain, forecast, ops."
+  ],
+  "app_archetype": "planner",
+  "ui_profile": {
+    "layout": "folio",
+    "surface": "aurora",
+    "font_stack": "\"Avenir Next\", \"Segoe UI\", sans-serif",
+    "radius": 28,
+    "shadow": 46,
+    "eyebrow_style": "solid",
+    "module_columns": 2,
+    "hero_align": "left",
+    "headline_mode": "normal"
+  },
+  "app_modules": [
+    {
+      "label": "Scenario 01",
+      "title": "Forecast Input Studio",
+      "description": "Model a planning scenario from the primary business and operational levers.",
+      "endpoint": "/score",
+      "input_mode": "json",
+      "cta": "Run Scenario",
+      "prefill": "{\n  \"features\": {\n    \"engagement_score\": 73,\n    \"tenure_days\": 183,\n    \"payment_miss_count\": 3,\n    \"segment\": \"mid_market\",\n    \"priority_flag\": true\n  }\n}",
+      "hint": "Forecast confidence and planning band will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Scenario 02",
+      "title": "Variance Explorer",
+      "description": "Explain how actual metrics differ from the expected planning baseline.",
+      "endpoint": "/analyze",
+      "input_mode": "json",
+      "cta": "Analyze Variance",
+      "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 36.7,\n    \"activation\": 37.5,\n    \"retention\": 50.4,\n    \"revenue\": 79.9\n  },\n  \"baseline\": {\n    \"acquisition\": 33.76,\n    \"activation\": 34.5,\n    \"retention\": 46.37,\n    \"revenue\": 73.51\n  }\n}",
+      "hint": "Variance summary and largest movement will appear here.",
+      "span": "wide"
+    },
+    {
+      "label": "Scenario 03",
+      "title": "Planning Memo",
+      "description": "Turn raw scenario inputs into a concise operational recommendation.",
+      "endpoint": "/recommend",
+      "input_mode": "json",
+      "cta": "Draft Memo",
+      "prefill": "{\n  \"prompt\": \"Recommend the next best action for Supply Chain Delay Predictor.\",\n  \"features\": {\n    \"engagement_score\": 73,\n    \"tenure_days\": 183,\n    \"payment_miss_count\": 3,\n    \"segment\": \"mid_market\",\n    \"priority_flag\": true\n  },\n  \"metrics\": {\n    \"acquisition\": 36.7,\n    \"activation\": 37.5,\n    \"retention\": 50.4,\n    \"revenue\": 79.9\n  }\n}",
+      "hint": "Decision memo and next steps will appear here.",
+      "span": "normal"
+    }
   ]
 }
