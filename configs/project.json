@@ -1,0 +1,49 @@
+{
+  "slug": "supply-chain-delay-predictor",
+  "title": "Supply Chain Delay Predictor",
+  "project_type": "ml",
+  "domain": "Operations",
+  "summary": "Forecast shipment delays and show the most important route, vendor, and lead-time signals.",
+  "tags": [
+    "supply-chain",
+    "forecast",
+    "ops"
+  ],
+  "accent": "#588157",
+  "dashboard_metrics": [
+    {
+      "label": "Model Lift",
+      "value": "68%",
+      "delta": "+6.4%"
+    },
+    {
+      "label": "Serving P95",
+      "value": "121ms",
+      "delta": "-12ms"
+    },
+    {
+      "label": "Data Freshness",
+      "value": "5h",
+      "delta": "steady"
+    }
+  ],
+  "sample_features": {
+    "engagement_score": 73,
+    "tenure_days": 183,
+    "payment_miss_count": 3,
+    "segment": "mid_market",
+    "priority_flag": true
+  },
+  "sample_metrics": {
+    "acquisition": 36.7,
+    "activation": 37.5,
+    "retention": 50.4,
+    "revenue": 79.9
+  },
+  "knowledge_base": [
+    "Supply Chain Delay Predictor is positioned as a Operations starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
+    "The primary value proposition is: Forecast shipment delays and show the most important route, vendor, and lead-time signals.",
+    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
+    "Typical stakeholders include analytics, operations, product, and leadership teams working on supply-chain, forecast, ops."
+  ]
+}

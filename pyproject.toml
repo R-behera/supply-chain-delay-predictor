@@ -1,0 +1,15 @@
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "supply-chain-delay-predictor"
+version = "0.1.0"
+description = "Forecast shipment delays and show the most important route, vendor, and lead-time signals."
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
