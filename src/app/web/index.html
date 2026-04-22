@@ -1,114 +1,29 @@
-
-        <!doctype html>
-        <html lang="en">
-        <head>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <title>Supply Chain Delay Predictor</title>
-          <link rel="stylesheet" href="./styles.css">
-        </head>
-        <body class="surface-aurora">
-          <div class="page layout-folio eyebrow-solid headline-normal modules-2 hero-align-left">
-            <section class="hero">
-              <div class="panel hero-copy">
-                <span class="eyebrow" data-health>Planning Workspace</span>
-                <h1 id="project-title">Supply Chain Delay Predictor</h1>
-                <p id="project-summary" class="lead">Forecast shipment delays and show the most important route, vendor, and lead-time signals.</p>
-                <ul id="project-tags" class="tag-list">
-                  <li>supply-chain</li><li>forecast</li><li>ops</li>
-                </ul>
-              </div>
-              <div class="panel hero-side">
-                <div class="metric-grid">
-                  <article class='card'><span>Model Lift</span><strong>68%</strong><em>+6.4%</em></article>
-<article class='card'><span>Serving P95</span><strong>121ms</strong><em>-12ms</em></article>
-<article class='card'><span>Data Freshness</span><strong>5h</strong><em>steady</em></article>
-                </div>
-                <div class="mini-grid">
-                  <article class='mini-card'><span>Project Type</span><strong>ML</strong></article><article class='mini-card'><span>Domain</span><strong>Operations</strong></article><article class='mini-card'><span>Application</span><strong>Planning Workspace</strong></article><article class='mini-card'><span>Deployment</span><strong>Docker + CI</strong></article>
-                </div>
-              </div>
-            </section>
-            <section class="app-grid">
-              <article class="panel module js-module span-normal">
-          <div class="module-header">
-            <span>Scenario 01</span>
-            <h2>Forecast Input Studio</h2>
-            <p>Model a planning scenario from the primary business and operational levers.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;features&quot;: {
-    &quot;engagement_score&quot;: 73,
-    &quot;tenure_days&quot;: 183,
-    &quot;payment_miss_count&quot;: 3,
-    &quot;segment&quot;: &quot;mid_market&quot;,
-    &quot;priority_flag&quot;: true
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/score" data-input-mode="json">Run Scenario</button>
-          </div>
-          <pre class="js-output">Forecast confidence and planning band will appear here.</pre>
-        </article>
-<article class="panel module js-module span-wide">
-          <div class="module-header">
-            <span>Scenario 02</span>
-            <h2>Variance Explorer</h2>
-            <p>Explain how actual metrics differ from the expected planning baseline.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;metrics&quot;: {
-    &quot;acquisition&quot;: 36.7,
-    &quot;activation&quot;: 37.5,
-    &quot;retention&quot;: 50.4,
-    &quot;revenue&quot;: 79.9
-  },
-  &quot;baseline&quot;: {
-    &quot;acquisition&quot;: 33.76,
-    &quot;activation&quot;: 34.5,
-    &quot;retention&quot;: 46.37,
-    &quot;revenue&quot;: 73.51
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/analyze" data-input-mode="json">Analyze Variance</button>
-          </div>
-          <pre class="js-output">Variance summary and largest movement will appear here.</pre>
-        </article>
-<article class="panel module js-module span-normal">
-          <div class="module-header">
-            <span>Scenario 03</span>
-            <h2>Planning Memo</h2>
-            <p>Turn raw scenario inputs into a concise operational recommendation.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;prompt&quot;: &quot;Recommend the next best action for Supply Chain Delay Predictor.&quot;,
-  &quot;features&quot;: {
-    &quot;engagement_score&quot;: 73,
-    &quot;tenure_days&quot;: 183,
-    &quot;payment_miss_count&quot;: 3,
-    &quot;segment&quot;: &quot;mid_market&quot;,
-    &quot;priority_flag&quot;: true
-  },
-  &quot;metrics&quot;: {
-    &quot;acquisition&quot;: 36.7,
-    &quot;activation&quot;: 37.5,
-    &quot;retention&quot;: 50.4,
-    &quot;revenue&quot;: 79.9
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/recommend" data-input-mode="json">Draft Memo</button>
-          </div>
-          <pre class="js-output">Decision memo and next steps will appear here.</pre>
-        </article>
-            </section>
-            <footer class="footer">
-              <span>Operations • ML • Planning Workspace</span>
-              <span>supply-chain-delay-predictor</span>
-            </footer>
-          </div>
-          <script id="bootstrap-data" type="application/json">{"project": {"slug": "supply-chain-delay-predictor", "title": "Supply Chain Delay Predictor", "project_type": "ml", "domain": "Operations", "summary": "Forecast shipment delays and show the most important route, vendor, and lead-time signals.", "tags": ["supply-chain", "forecast", "ops"]}, "app_archetype": "planner", "ui_profile": {"layout": "folio", "surface": "aurora", "font_stack": "\"Avenir Next\", \"Segoe UI\", sans-serif", "radius": 28, "shadow": 46, "eyebrow_style": "solid", "module_columns": 2, "hero_align": "left", "headline_mode": "normal"}, "app_modules": [{"label": "Scenario 01", "title": "Forecast Input Studio", "description": "Model a planning scenario from the primary business and operational levers.", "endpoint": "/score", "input_mode": "json", "cta": "Run Scenario", "prefill": "{\n  \"features\": {\n    \"engagement_score\": 73,\n    \"tenure_days\": 183,\n    \"payment_miss_count\": 3,\n    \"segment\": \"mid_market\",\n    \"priority_flag\": true\n  }\n}", "hint": "Forecast confidence and planning band will appear here.", "span": "normal"}, {"label": "Scenario 02", "title": "Variance Explorer", "description": "Explain how actual metrics differ from the expected planning baseline.", "endpoint": "/analyze", "input_mode": "json", "cta": "Analyze Variance", "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 36.7,\n    \"activation\": 37.5,\n    \"retention\": 50.4,\n    \"revenue\": 79.9\n  },\n  \"baseline\": {\n    \"acquisition\": 33.76,\n    \"activation\": 34.5,\n    \"retention\": 46.37,\n    \"revenue\": 73.51\n  }\n}", "hint": "Variance summary and largest movement will appear here.", "span": "wide"}, {"label": "Scenario 03", "title": "Planning Memo", "description": "Turn raw scenario inputs into a concise operational recommendation.", "endpoint": "/recommend", "input_mode": "json", "cta": "Draft Memo", "prefill": "{\n  \"prompt\": \"Recommend the next best action for Supply Chain Delay Predictor.\",\n  \"features\": {\n    \"engagement_score\": 73,\n    \"tenure_days\": 183,\n    \"payment_miss_count\": 3,\n    \"segment\": \"mid_market\",\n    \"priority_flag\": true\n  },\n  \"metrics\": {\n    \"acquisition\": 36.7,\n    \"activation\": 37.5,\n    \"retention\": 50.4,\n    \"revenue\": 79.9\n  }\n}", "hint": "Decision memo and next steps will appear here.", "span": "normal"}], "sample_features": {"engagement_score": 73, "tenure_days": 183, "payment_miss_count": 3, "segment": "mid_market", "priority_flag": true}, "sample_metrics": {"acquisition": 36.7, "activation": 37.5, "retention": 50.4, "revenue": 79.9}, "knowledge_base": ["Supply Chain Delay Predictor is positioned as a Operations starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.", "The primary value proposition is: Forecast shipment delays and show the most important route, vendor, and lead-time signals.", "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.", "Typical stakeholders include analytics, operations, product, and leadership teams working on supply-chain, forecast, ops."], "dashboard_metrics": [{"label": "Model Lift", "value": "68%", "delta": "+6.4%"}, {"label": "Serving P95", "value": "121ms", "delta": "-12ms"}, {"label": "Data Freshness", "value": "5h", "delta": "steady"}]}</script>
-          <script src="./app.js"></script>
-        </body>
-        </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supply Chain Delay Predictor App</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <div id="scene" class="app-scene">
+    <header class="shell hero">
+      <div>
+        <span class="eyebrow">Applied AI product systems</span>
+        <h1>Supply Chain Delay Predictor</h1>
+        <p>![Demo Screenshot](demo/screenshot.png)</p>
+      </div>
+      <aside class="status-card">
+        <div class="pill">API connected</div>
+        <div class="pill">operations lead</div>
+        <div class="pill">neural-ribbon</div>
+      </aside>
+    </header>
+    <section id="metrics" class="grid metrics"></section>
+    <section id="signals" class="grid signals"></section>
+  </div>
+  <script>window.PROJECT_MANIFEST = {"slug": "supply-chain-delay-predictor", "title": "Supply Chain Delay Predictor", "summary": "![Demo Screenshot](demo/screenshot.png)", "domain": "Applied AI product systems", "audience": "operations lead", "promise": "Turn promising technical capability into a production-shaped workflow for real teams.", "hero": ["Production-grade app scaffold with API, CI, tests, Docker, and GitHub Pages landing.", "3D landing surface designed for GitHub Pages and recruiter-friendly storytelling.", "App backend structured for local or container deployment without changing the product narrative."], "kpis": [{"label": "Workflow clarity", "value": "96%", "note": "Operator actions mapped to product stages"}, {"label": "Deployment posture", "value": "API + Docker", "note": "Local and containerized startup paths"}, {"label": "Presentation layer", "value": "3D Pages ready", "note": "Static GitHub landing page included"}], "stages": ["ingest", "validate", "analyze", "decide", "monitor"], "cards": [{"title": "Operator cockpit", "body": "One-screen surface for the operations lead to understand what matters first."}, {"title": "API contract", "body": "Structured endpoints for health, manifest, readiness, and showcase data."}, {"title": "Deployment path", "body": "Repository includes Docker, Compose, CI workflow, and a Pages-ready landing surface."}], "scene": "neural-ribbon", "theme": {"bg": "#0f0c07", "surface": "#1f1811", "ink": "#fff8ef", "muted": "#cab59a", "accent": "#ffb15e", "accent2": "#7ef7d0"}, "pages_url": "https://r-behera.github.io/supply-chain-delay-predictor/", "api_examples": {"health": {"status": "ok", "project": "supply-chain-delay-predictor"}, "readiness": {"api": "ready", "landing_page": "docs/index.html", "container": "Dockerfile present"}, "signals": [{"name": "Decision coverage", "status": "strong", "detail": "App and landing narrative aligned"}, {"name": "Operator context", "status": "strong", "detail": "Primary user anchored as operations lead"}, {"name": "Delivery path", "status": "ready", "detail": "Pages + containerized app scaffold generated"}]}};</script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
